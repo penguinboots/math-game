@@ -6,6 +6,7 @@ class Game
 
   def start_game
     puts "Hello! New game started."
+    puts "********** ********** **********"
     turn
   end
 
@@ -15,7 +16,9 @@ class Game
     else
       puts "#{player.name} wins with 1 remaining life! Close one!"
     end
-    
+
+    puts "********** GAME OVER **********"
+
     exit
   end
 
@@ -30,9 +33,12 @@ class Game
   def turn
     @player_1.new_question
     check_score
+    puts "********** ********** **********"
     @player_2.new_question
     check_score
+    puts "********** ********** **********"
     puts "Next round!"
+    puts "********** ********** **********"
     turn
   end
 end
