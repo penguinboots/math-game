@@ -6,10 +6,17 @@ class Game
 
   def start_game
     puts "Hello! New game started."
+    turn
   end
 
   def declare_winner(player)
-    puts "#{player.name} wins with #{player.lives} remaining lives."
+    if player.lives > 1
+      puts "#{player.name} wins with #{player.lives} remaining lives."
+    else
+      puts "#{player.name} wins with 1 remaining life! Close one!"
+    end
+    
+    exit
   end
 
   def check_score
@@ -26,5 +33,6 @@ class Game
     @player_2.new_question
     check_score
     puts "Next round!"
+    turn
   end
 end

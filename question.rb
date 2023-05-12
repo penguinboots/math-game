@@ -6,10 +6,10 @@ class Question
   end
 
   def ask(player)
-    puts "#{player}: What is #{@num1} plus #{@num2}?"
+    puts "#{player}, tell me, what is #{@num1} plus #{@num2}?"
   end
 
-  def check(input)
+  def check?(input)
     @sum == input
   end
 end
