@@ -12,3 +12,4 @@ class Question
   def check(input)
     @sum == input
   end
+end

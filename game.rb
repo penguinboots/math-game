@@ -1,7 +1,7 @@
 class Game
-  def initialize
-    @player_1 = Player.new('Player 1')
-    @player_2 = Player.new('Player 2')
+  def initialize(p1, p2)
+    @player_1 = Player.new(p1, 3)
+    @player_2 = Player.new(p2, 3)
   end
 
   def start_game
@@ -18,6 +18,7 @@ class Game
     elsif @player_2.is_dead
       declare_winner(@player_1)
     end
+  end
 
   def turn
     @player_1.new_question
